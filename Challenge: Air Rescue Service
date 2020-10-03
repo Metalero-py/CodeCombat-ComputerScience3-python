@@ -1,0 +1,9 @@
+# To save a friend: say "Friend " followed by the friend's id property.
+# To zap an enemy: say "Enemy " followed by the enemy's id property.
+while True:
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        hero.say("Enemy " + enemy.id)
+    friend = hero.findNearestFriend()
+    if friend:
+        hero.say("Friend " + friend.id)
