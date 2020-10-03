@@ -1,0 +1,18 @@
+# You are given the number of gold, silver and bronze coins.
+# Save the result of each mathmatical operation into a variable, and say the result at each step.
+wizard = hero.findNearestFriend()
+goldCoins = wizard.goldCoins
+silverCoins = wizard.silverCoins
+bronzeCoins = wizard.bronzeCoins
+# Add the number of gold and silver coins, then say the result.
+sum = goldCoins + silverCoins
+hero.say(sum)
+# Subtract bronze coins from the previous result, then say the new result.
+dif = sum - bronzeCoins
+hero.say(dif)
+# Divide the previous result by 3, then say the new result.
+quo = dif / 3
+hero.say(quo)
+# Multiply the previous result by 2, then say the new result.
+pro = quo * 2
+hero.say(pro)
