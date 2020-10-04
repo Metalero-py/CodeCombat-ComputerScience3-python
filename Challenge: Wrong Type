@@ -1,0 +1,13 @@
+# Only attack enemies if their `type` is "munchkin".
+
+def enemyKill(enemy):
+    if enemy.type == "munchkin":
+        hero.attack(enemy)
+
+
+while True:
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        enemyKill(enemy)
+    else:
+        hero.moveXY(40, 34)
