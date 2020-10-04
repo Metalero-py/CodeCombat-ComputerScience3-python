@@ -1,0 +1,9 @@
+# Say the x,y position of ogres as two numbers separated by a comma.
+# For better accuracy, subtract 4 from the y position before saying it.
+while True:
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        enemPos = enemy.pos.x + "" + enemy.pos.y - 4
+        enemyX = enemy.pos.x
+        enemyY = enemy.pos.y - 4
+        hero.say( enemyX + "," + enemyY )
