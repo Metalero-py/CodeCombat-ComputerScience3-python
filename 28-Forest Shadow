@@ -1,0 +1,19 @@
+ Big ogres can't see you in the forest.
+# Attack only the small ogres in the forest.
+# Collect coins and gems only.
+# Don't leave the forest and don't eat/drink anything.
+
+while True:
+    # Find the nearest enemy.
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        if enemy.type == "thrower" or enemy.type == "munchkin":
+            hero.attack(enemy)
+    # Attack it only if its type is "thrower" or "munchkin".
+    # Find the nearest item.
+    item = hero.findNearestItem()
+    if item:
+        if item.type == "gem" or item.type == "coin":
+            hero.moveXY(item.pos.x, item.pos.y)
+    # Collect it only if its type is "gem" or "coin".
+    pass
