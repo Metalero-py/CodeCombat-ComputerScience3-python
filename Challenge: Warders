@@ -1,0 +1,6 @@
+# Attack only if an enemy's type is "munchkin" or "thrower".
+while True:
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        if enemy.type == "munchkin" or enemy.type == "thrower":
+            hero.attack(enemy)
