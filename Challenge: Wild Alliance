@@ -1,0 +1,7 @@
+# Only attack if an enemy's type is not "burl"
+
+while True:
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        if enemy.type != "burl":
+            hero.attack(enemy)
