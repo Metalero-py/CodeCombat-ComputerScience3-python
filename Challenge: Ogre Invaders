@@ -1,0 +1,15 @@
+# Fill the getEnemyX function so that it finds an enemy and returns its X position. If there is no enemy, return -1.
+
+def getEnemyX():
+    # Complete this function.
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        return enemy.pos.x
+    else:
+        return -1
+    pass
+
+while True:
+    enemyX = getEnemyX()
+    if enemyX > 0:
+        hero.say(enemyX)
