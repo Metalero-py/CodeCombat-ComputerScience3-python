@@ -1,0 +1,32 @@
+# Move to 'Eszter' and get three secret values from her.
+hero.moveXY(24, 16)
+secretA = hero.findNearestFriend().getSecretA()
+secretB = hero.findNearestFriend().getSecretB()
+secretC = hero.findNearestFriend().getSecretC()
+
+# Say "TRUE" to 'Tamas' if A AND B are true, OR if C is true. Otherwise, say "FALSE."
+# Remember to use parentheses to do your logic in the proper order.
+tam = (secretA and secretB) or secretC
+hero.moveXY(19, 26)
+hero.say(tam)
+hero.moveXY(26, 36)
+# Say "TRUE" to 'Zsofi' if A OR B is true, AND if C is true. Otherwise, say "FALSE."
+if (secretA or secretB) and secretC:
+    hero.say("TRUE")
+else:
+    hero.say("FALSE")
+hero.moveXY(37, 34)
+
+
+# Say "TRUE" to 'Istvan' if A OR C is true, AND if B OR C is true. Otherwise, say "FALSE."
+if (secretA or secretC) and (secretB or secretC):
+    hero.say("TRUE")
+else:
+    hero.say("FALSE")
+hero.moveXY(40, 22)
+
+# Say "TRUE" to 'Csilla' if A AND B are true, OR if B is true AND C is NOT true. Otherwise, say "FALSE."
+if (secretA and secretB) or secretB == True and secretC != True:
+    hero.say("TRUE")
+else:
+    hero.say("FALSE")
