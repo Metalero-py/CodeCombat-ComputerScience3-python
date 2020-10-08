@@ -1,0 +1,6 @@
+# Some of these burls are sick.
+# Only attack if the enemy.type is "burl" and the enemy.health is less than 10.
+while True:
+    enemy = hero.findNearestEnemy()
+    if enemy.type == "burl" and enemy.health < 10:
+        hero.attack(enemy)
