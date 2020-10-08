@@ -1,0 +1,16 @@
+# Don't worry about small and medium-sized ogres.
+# Your targets are type "brawler".
+# When a "brawler" is closer than 50m, fire artillery.
+
+while True:
+    # Find the nearest enemy and the distance to it.
+    enemy = hero.findNearestEnemy()
+    distance = hero.distanceTo(enemy)
+    # If the enemy's type is "brawler"
+    if enemy.type == "brawler":
+        if distance < 50:
+            hero.say("Fire!")
+    # AND the distance to it is less than 50 meters,
+    # Then say "Fire!" to signal the artillery.
+    
+    pass
