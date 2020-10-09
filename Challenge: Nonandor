@@ -1,0 +1,12 @@
+# Collect items only if their `type` is "potion" OR "lightstone".
+# Attack enemies if their `type` isn't "burl" AND they are closer than 15 metres.
+
+while True:
+    enemy = hero.findNearestEnemy()
+    distance = hero.distanceTo(enemy)
+    item = hero.findNearestItem()
+    if item:
+        if item.type == "potion" or item.type == "lightstone":
+            hero.moveXY(item.pos.x, item.pos.y)
+        if enemy.type != "burl" and distance < 15:
+            hero.attack(enemy)
