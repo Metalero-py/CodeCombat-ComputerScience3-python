@@ -1,0 +1,9 @@
+# Attack the skeleton while its health is more than a third of its maxHealth.
+# Then run away from it.
+
+while True:
+    enemy = hero.findNearestEnemy()
+    if enemy.health > (enemy.maxHealth / 3):
+        hero.attack(enemy)
+    else:
+        hero.moveXY(39, 22)
