@@ -1,0 +1,12 @@
+# If a lightstone is above your hero, move 8 meters up.
+# If a lightstone is to the right of your hero, move 8 meters right.
+# If the hero's health is less than than 1/3 of hero's maxHealth, then say something.
+while True:
+    lightstone = hero.findNearestItem()
+    if lightstone:
+        if hero.pos.y < lightstone.pos.y:
+            hero.moveXY(hero.pos.x, hero.pos.y + 8)
+        if hero.pos.x < lightstone.pos.x:
+            hero.moveXY(hero.pos.x + 8, hero.pos.y)
+        if hero.health < hero.maxHealth / 3:
+            hero.say("yooo")
