@@ -1,0 +1,11 @@
+while True:
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        if hero.pos.y < enemy.pos.y:
+            hero.moveXY(hero.pos.x, hero.pos.y + 4)
+            hero.moveXY(hero.pos.x + 12, hero.pos.y)
+        if hero.pos.y > enemy.pos.y:
+            hero.moveXY(hero.pos.x, hero.pos.y - 4)
+            hero.moveXY(hero.pos.x + 12, hero.pos.y)
+    else:
+        hero.moveXY(hero.pos.x + 12, hero.pos.y)
