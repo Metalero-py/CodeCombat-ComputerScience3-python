@@ -1,0 +1,12 @@
+# Collect 99 or more gold, then move to the red x to leave the field.
+
+
+while True:
+    coin = hero.findNearestItem()
+    if coin:
+        hero.moveXY(coin.pos.x, coin.pos.y)
+    if hero.gold >= 99:
+        break
+
+hero.moveXY(30, 8)
+
