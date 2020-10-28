@@ -1,0 +1,9 @@
+# If you see an enemy, don't move. Do this by "continuing" from the start of the loop. Otherwise, gather gems.
+
+while True:
+    enemy = hero.findNearestEnemy()
+    gem = hero.findNearestItem()
+    if enemy:
+        continue
+    else:
+        hero.moveXY(gem.pos.x, gem.pos.y)
