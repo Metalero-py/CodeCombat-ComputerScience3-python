@@ -1,0 +1,17 @@
+# Defeat 7 ogres by attacking any you see for 30 seconds. Ignore "burl" and "sand-yak" enemies. Then go to the grassy field and collect 20 gold. Finally, leave to the right.
+
+while True:
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        if enemy.type != "burl" and enemy.type != "sand-yak":
+            hero.attack(enemy)
+            continue
+        if hero.time == 30:
+            break
+
+while True:
+    item = hero.findNearestItem()
+    if item:
+        hero.moveXY(item.pos.x, item.pos.y)
+    if hero.gold >= 20:
+        hero.moveXY(78, 34)
