@@ -1,0 +1,18 @@
+# Welcome to Course 2 Arena!
+# Accumulate coins to raise a suitable army.
+# Move to the X Markers to hire troops.
+# 2 Scouts cost 30 gold to summon.
+# 2 Throwers cost 20 gold to summon.
+# If your hero has over a certain amount of gold, do something!
+# Watch for flags that may appear signaling certain events.
+
+while True:
+    if hero.gold >= 50:
+        # If your hero has over a certain amount of gold, do something!
+        hero.moveXY(81, 99)
+        pass
+    else:
+        item = hero.findNearestItem()
+        # Gather coins to summon units!
+        hero.moveXY(item.pos.x, item.pos.y)
+        pass
