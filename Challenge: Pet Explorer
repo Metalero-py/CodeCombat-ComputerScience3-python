@@ -1,0 +1,14 @@
+# Move to each button when you hear the explorer say its number.
+# Only listen to the explorer, not the peasants!
+explorer = hero.findNearestFriend()
+
+def onHear(event):
+    if event.speaker == explorer:
+        if event.message == "1":
+            pet.moveXY(8, 26)
+        if event.message == "2":
+            pet.moveXY(26, 39)
+        if event.message == "3":
+            pet.moveXY(26, 13)
+
+pet.on("hear", onHear)
