@@ -1,0 +1,21 @@
+# Attack enemies or collect items less than 15 meters away.
+# Collect only "coin" type items.
+# Attack only "munchkin" type enemies.
+def enemyFind():
+    enemy = hero.findNearestEnemy()
+    if enemy:
+        if enemy.type == "munchkin":
+            distance = hero.distanceTo(enemy)
+            if distance < 15:
+                hero.attack(enemy)
+def coinFind():
+    item = hero.findNearestItem()
+    if item:
+        if item.type == "coin":
+            distance = hero.distanceTo(item)
+            if distance < 15:
+                hero.moveXY(item.pos.x, item.pos.y)
+
+while True:
+    coinFind()
+    enemyFind()
